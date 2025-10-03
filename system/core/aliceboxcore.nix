@@ -1,5 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 {
+
 imports =
     [
     ./boot.nix
@@ -11,5 +12,6 @@ imports =
     ./desktop.nix
     ./graphics-amd.nix
     ./locale.nix
+    ./niri.nix
     ];
 }

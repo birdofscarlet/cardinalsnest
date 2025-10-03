@@ -13,7 +13,9 @@
   ###########
   # MODULES #
   ###########
-
+  
+  nixpkgs.overlays = [niri.overlays.niri];
+  
   imports =
     [
         ./hardware-configuration.nix
