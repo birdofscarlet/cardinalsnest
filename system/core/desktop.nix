@@ -2,7 +2,15 @@
 
 {
 
-# Desktop Portal configuration
+# Compositor
+
+  programs.niri =
+  {
+    enable = true;
+
+  };
+
+/* Desktop Portal configuration
   xdg.portal =
   {
     enable = true;
@@ -28,7 +36,7 @@
     xdg-desktop-portal-gtk
     ];
 
-  };
+  }; */
 
 # Desktop Services configuration
   services =
