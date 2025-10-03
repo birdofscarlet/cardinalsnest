@@ -16,6 +16,7 @@
   imports =
   [
     ../../system/core/shell.nix
+    ../../system/core/niri.nix
   ];
 
   programs.git.enable = true;

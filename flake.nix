@@ -21,6 +21,7 @@ sudo nixos-rebuild switch --flake ~/mysystem
       
       stylix.url = "github:danth/stylix";
 
+      niri.url = "github:sodiboo/niri-flake";
 
   };
 
@@ -57,6 +58,7 @@ sudo nixos-rebuild switch --flake ~/mysystem
           [
 	    ./hosts/alicebox/configuration.nix
 	    inputs.stylix.nixosModules.stylix
+	    inputs.niri.nixosModules.niri
 	  ];
         };
       };
