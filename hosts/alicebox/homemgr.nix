@@ -18,6 +18,8 @@
     ../../system/core/shell.nix
   ];
 
+  programs.git.enable = true;
+
   home.packages = with pkgs;
   [
   # TODO: make this stuff part of the desktop.nix file somehow
@@ -31,10 +33,10 @@
 
   # TODO: put this in shell configuration file
   vim
-  git
   gh
   hyfetch
   fastfetch
+  x11_ssh_askpass
 
   proton-pass
   firefox
