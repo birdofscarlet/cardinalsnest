@@ -4,17 +4,7 @@
 
 {
 
-  ##########################
-  # ALICEBOX CONFIGURATION #
-  ##########################
-
   hardware.cpu.amd.updateMicrocode = true;
-
-  ###########
-  # MODULES #
-  ###########
-  
-  nixpkgs.overlays = [niri.overlays.niri];
   
   imports =
     [

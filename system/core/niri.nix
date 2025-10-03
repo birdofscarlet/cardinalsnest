@@ -3,7 +3,7 @@
 
 programs.niri = {
 
-config = ''
+settings = ''
 input {
     keyboard {
         xkb {
