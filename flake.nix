@@ -18,6 +18,9 @@ sudo nixos-rebuild switch --flake ~/mysystem
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+      
+      stylix.url = "github:danth/stylix";
+
 
   };
 
@@ -50,11 +53,15 @@ sudo nixos-rebuild switch --flake ~/mysystem
         alicebox = nixpkgs.lib.nixosSystem
         {
           specialArgs = {inherit inputs system;};
-          modules = [./hosts/alicebox/configuration.nix];
+          modules = 
+          [
+	    ./hosts/alicebox/configuration.nix
+	    inputs.stylix.nixosModules.stylix
+	  ];
         };
       };
 
-      homeConfig =
+      homeConfigurations =
       {
           homeConfigurations =
           {
@@ -62,7 +69,8 @@ sudo nixos-rebuild switch --flake ~/mysystem
             {
               pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
               extraSpecialArgs = {inherit inputs;};
-              modules = [./hosts/alicebox/homemgr.nix];
+              modules =
+              [./hosts/alicebox/homemgr.nix];
             };
           };
       };

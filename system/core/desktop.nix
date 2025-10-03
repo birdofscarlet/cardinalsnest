@@ -10,34 +10,6 @@
 
   };
 
-/* Desktop Portal configuration
-  xdg.portal =
-  {
-    enable = true;
-      config =
-      {
-        common =
-        {
-          default =
-          [
-            "gtk"
-          ];
-
-          "org.freedesktop.impl.portal.FileChooser" =
-          [
-            "gtk"
-          ];
-
-        };
-      };
-
-    extraPortals = with pkgs;
-    [
-    xdg-desktop-portal-gtk
-    ];
-
-  }; */
-
 # Desktop Services configuration
   services =
   {

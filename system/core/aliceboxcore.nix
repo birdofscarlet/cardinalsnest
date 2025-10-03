@@ -11,6 +11,5 @@ imports =
     ./desktop.nix
     ./graphics-amd.nix
     ./locale.nix
-    ./shell.nix
     ];
 }

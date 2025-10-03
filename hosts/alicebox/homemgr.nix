@@ -15,19 +15,37 @@
 
   imports =
   [
-
+    ../../system/core/shell.nix
   ];
 
   home.packages = with pkgs;
   [
-  /*  kitty
-    aseprite
+  # TODO: make this stuff part of the desktop.nix file somehow
+  alacritty
+  fuzzel
+  swaylock
+  waybar
+  swww
+  mako
+  swayidle
+
+  # TODO: put this in shell configuration file
+  vim
+  git
+  gh
+  hyfetch
+  fastfetch
+
+  proton-pass
+  firefox
+  ranger
+  /*aseprite
     audacity
     ciscoPacketTracer8
     gimp
     obs-studio
     prismlauncher
-    proton-pass
+
     ringracers
     teams-for-linux
     vlc
