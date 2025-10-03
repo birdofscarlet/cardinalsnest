@@ -12,5 +12,6 @@ imports =
     ./graphics-amd.nix
     ./locale.nix
     ./desktop.nix
+    ./stylix.nix
     ];
 }
