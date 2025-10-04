@@ -22,7 +22,8 @@ sudo nixos-rebuild switch --flake ~/mysystem
       stylix.url = "github:danth/stylix";
 
       niri.url = "github:sodiboo/niri-flake";
-
+      
+      nixcord.url = "github:kaylorben/nixcord";
   };
 
  #-----------------------------------------------------------#
@@ -72,7 +73,9 @@ sudo nixos-rebuild switch --flake ~/mysystem
               pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
               extraSpecialArgs = {inherit inputs;};
               modules =
-              [./hosts/alicebox/homemgr.nix];
+              [
+		./hosts/alicebox/homemgr.nix
+	      ];
             };
           };
       };

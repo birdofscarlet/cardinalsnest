@@ -17,6 +17,8 @@
   [
     ../../system/core/shell.nix
     ../../system/core/niri.nix
+    ../../system/core/stylix.nix
+    
   ];
 
   programs.git.enable = true;
