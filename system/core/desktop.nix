@@ -16,6 +16,7 @@
   services =
   {
     libinput.enable = true;
+    xserver.enable = true;
 
     greetd =
     {

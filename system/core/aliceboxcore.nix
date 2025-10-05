@@ -1,6 +1,8 @@
 { config, pkgs, lib, inputs, ... }:
 {
 
+
+  programs.steam.enable = true; # put this somewhere it makes sense later TODO
 imports =
     [
     ./boot.nix

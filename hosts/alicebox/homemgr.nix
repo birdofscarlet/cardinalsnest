@@ -13,6 +13,7 @@
   home.homeDirectory = "/home/cardinal";
   home.stateVersion = "24.05";
 
+
   imports =
   [
     ../../system/core/shell.nix
@@ -33,6 +34,8 @@
   swww
   mako
   swayidle
+  xwayland-satellite
+  xwayland
 
   # TODO: put this in shell configuration file
   vim

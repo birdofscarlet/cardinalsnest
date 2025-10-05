@@ -58,6 +58,7 @@ sudo nixos-rebuild switch --flake ~/mysystem
           modules = 
           [
 	    ./hosts/alicebox/configuration.nix
+	    inputs.home-manager.nixosModules.home-manager
 	    inputs.stylix.nixosModules.stylix
 	    inputs.niri.nixosModules.niri
 	  ];
