@@ -20,33 +20,33 @@
     ../../system/core/niri.nix
   ];
 
-  programs.git.enable = true;
-  programs.alacritty.enable = true;
-  programs.fuzzel.enable = true;
-  programs.swaylock.enable = true;
+  programs = 
+  {
+    git.enable = true;
+    alacritty.enable = true;
+    fuzzel.enable = true;
+    swaylock.enable = true;
+    waybar.enable = true;
+    vim.enable = true;
+    gh.enable = true;
+  };
+
+  services =
+  {
+    wpaperd.enable = true;
+    mako.enable = true;
+    swayidle.enable = true;
+  };
 
   home.packages = with pkgs;
   [
-  # TODO: make this stuff part of the desktop.nix file somehow
- # alacritty
- # fuzzel
- # swaylock
-  waybar
-  swww
-  mako
-  swayidle
-  xwayland-satellite
-  xwayland
-
   # TODO: put this in shell configuration file
-  vim
-  gh
   hyfetch
   fastfetch
   x11_ssh_askpass
+  xwayland-satellite
 
   proton-pass
-  firefox
   ranger
   /*aseprite
     audacity
