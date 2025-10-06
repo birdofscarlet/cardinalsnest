@@ -18,18 +18,19 @@
   [
     ../../system/core/shell.nix
     ../../system/core/niri.nix
-    ../../system/core/stylix.nix
-    
   ];
 
   programs.git.enable = true;
+  programs.alacritty.enable = true;
+  programs.fuzzel.enable = true;
+  programs.swaylock.enable = true;
 
   home.packages = with pkgs;
   [
   # TODO: make this stuff part of the desktop.nix file somehow
-  alacritty
-  fuzzel
-  swaylock
+ # alacritty
+ # fuzzel
+ # swaylock
   waybar
   swww
   mako
