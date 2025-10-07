@@ -18,6 +18,9 @@
       terminal = 0.7;
     };
 
+    targets = {
+      spicetify.enable = false;
+    };
     overlays.enable = true;
   };
 }

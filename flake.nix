@@ -21,6 +21,9 @@ sudo nixos-rebuild switch --flake ~/mysystem
     niri.url = "github:sodiboo/niri-flake";
 
     nixcord.url = "github:kaylorben/nixcord";
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
   };
 
   #-----------------------------------------------------------#
@@ -51,6 +54,7 @@ sudo nixos-rebuild switch --flake ~/mysystem
             ./hosts/alicebox/configuration.nix
             inputs.stylix.nixosModules.stylix
             inputs.niri.nixosModules.niri
+            inputs.spicetify-nix.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

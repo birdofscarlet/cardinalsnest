@@ -14,13 +14,11 @@
       themeLinks = [
         "https://luckfire.github.io/amoled-cord/src/amoled-cord.css"
       ];
+      enabledThemes = [ "amoled-cord.css" ];
       frameless = true; # Set some Vencord options
       plugins = {
         alwaysExpandRoles.enable = true;
         alwaysTrust.enable = true;
-        betterFolders.enable = true;
-        betterFolders.closeAllFolders = true;
-        betterFolders.closeOthers = true;
         betterFolders.showFolderIcon = "always";
         betterGifAltText.enable = true;
         betterSettings.enable = true;

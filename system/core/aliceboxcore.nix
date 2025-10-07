@@ -17,5 +17,6 @@
     ./desktop.nix
     ./stylix.nix
     ./gaming.nix
+    ../packages/spotify.nix
   ];
 }
