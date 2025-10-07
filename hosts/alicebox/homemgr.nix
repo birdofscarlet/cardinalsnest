@@ -18,6 +18,7 @@
   [
     ../../system/core/shell.nix
     ../../system/core/niri.nix
+    ../../system/packages/discord.nix
   ];
 
   programs = 
@@ -29,6 +30,8 @@
     waybar.enable = true;
     vim.enable = true;
     gh.enable = true;
+    firefox.enable = true;
+    emacs.enable = true;
   };
 
   services =
