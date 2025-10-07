@@ -1,9 +1,12 @@
-{ config, pkgs, lib, inputs, ... }:
-
-#------ configuration specific to my desktop PC ------#
-
 {
-
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
+#------ configuration specific to my desktop PC ------#
+{
   ###########################
   #    HOME CONFIGURATION   #
   ###########################
@@ -13,16 +16,13 @@
   home.homeDirectory = "/home/cardinal";
   home.stateVersion = "24.05";
 
-
-  imports =
-  [
+  imports = [
     ../../system/core/niri.nix
     ../../system/packages/discord.nix
     ../../system/core/shell.nix
   ];
 
-  programs =
-  {
+  programs = {
     git.enable = true;
     alacritty.enable = true;
     fuzzel.enable = true;
@@ -32,15 +32,13 @@
     vim.enable = true;
   };
 
-  services =
-  {
+  services = {
     wpaperd.enable = true;
     mako.enable = true;
     swayidle.enable = true;
   };
 
-  home.packages = with pkgs;
-  [
+  home.packages = with pkgs; [
     gh
     hyfetch
     fastfetch
@@ -60,8 +58,4 @@
     yt-dlp
     #(pkgs.callPackage ../../system/packages/derivations/dungeondraft.nix {})
   ];
-
-
-
-
 }

@@ -1,28 +1,26 @@
-{ config, pkgs, lib, inputs, ... }:
-
-#------ configuration specific to my desktop PC ------#
-
 {
-
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
+#------ configuration specific to my desktop PC ------#
+{
   hardware.cpu.amd.updateMicrocode = true;
-  
-  imports =
-    [
-        ./hardware-configuration.nix
-        ../../system/core/aliceboxcore.nix
-        inputs.home-manager.nixosModules.home-manager
-    ];
 
+  imports = [
+    ./hardware-configuration.nix
+    ../../system/core/aliceboxcore.nix
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
-  home-manager =
-  {
-    extraSpecialArgs = { inherit inputs; };
-    users =
-    {
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
       "cardinal" = import ./homemgr.nix;
     };
   };
 
-    system.stateVersion = "24.11";
-
+  system.stateVersion = "24.11";
 }

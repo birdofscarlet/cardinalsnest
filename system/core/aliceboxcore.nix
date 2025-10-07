@@ -1,7 +1,11 @@
-{ config, pkgs, lib, inputs, ... }:
 {
-imports =
-    [
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
+  imports = [
     ./boot.nix
     ./fonts.nix
     ./network.nix
@@ -13,5 +17,5 @@ imports =
     ./desktop.nix
     ./stylix.nix
     ./gaming.nix
-    ];
+  ];
 }

@@ -1,37 +1,32 @@
-{ config, lib, pkgs, inputs, ... }:
-
 {
-
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  programs =
-  {
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
+  nixpkgs.overlays = [inputs.niri.overlays.niri];
+  programs = {
     niri.enable = true;
     xwayland.enable = true;
   };
 
-  services =
-  {
+  services = {
     libinput.enable = true;
     xserver.enable = true;
 
-    greetd =
-    {
+    greetd = {
       enable = true;
 
-      settings =
-      {
-        default_session =
-        {
+      settings = {
+        default_session = {
           command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
         };
       };
     };
   };
 
-  environment.systemPackages = with pkgs;
-  [
+  environment.systemPackages = with pkgs; [
     xwayland-satellite
   ];
-
 }
-

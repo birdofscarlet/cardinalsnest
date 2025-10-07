@@ -1,19 +1,20 @@
-  { config, pkgs, lib, inputs, ... }:
 {
-  nix.settings =
-  {
-    experimental-features = [ "nix-command" "flakes" ];
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
   };
 
-  nixpkgs.config =
-  {
+  nixpkgs.config = {
     allowUnfree = true;
     allowUnsupportedSystem = true;
   };
 
-  home-manager =
-  {
+  home-manager = {
     backupFileExtension = "bak";
   };
-
- }
+}
