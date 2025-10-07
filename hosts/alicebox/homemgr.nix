@@ -16,22 +16,19 @@
 
   imports =
   [
-    ../../system/core/shell.nix
     ../../system/core/niri.nix
     ../../system/packages/discord.nix
+    ../../system/core/shell.nix
   ];
 
-  programs = 
+  programs =
   {
     git.enable = true;
     alacritty.enable = true;
     fuzzel.enable = true;
     swaylock.enable = true;
     waybar.enable = true;
-    vim.enable = true;
-    gh.enable = true;
     firefox.enable = true;
-    emacs.enable = true;
   };
 
   services =
@@ -43,14 +40,7 @@
 
   home.packages = with pkgs;
   [
-  # TODO: put this in shell configuration file
-  hyfetch
-  fastfetch
-  x11_ssh_askpass
-  xwayland-satellite
-
   proton-pass
-  ranger
   /*aseprite
     audacity
     ciscoPacketTracer8

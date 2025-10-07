@@ -1,8 +1,9 @@
 { config, pkgs, lib, inputs, ... }:
 {
 
-programs.zsh =
+programs =
   {
+    zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
@@ -25,6 +26,11 @@ programs.zsh =
 
      initContent = "hyfetch";
 
+   }; 
+
+
   };
 
-}
+
+ }
+

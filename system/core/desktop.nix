@@ -3,13 +3,9 @@
 {
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-
-# Compositor
-
   programs.niri =
   {
     enable = true;
-
   };
 
 # Desktop Services configuration
