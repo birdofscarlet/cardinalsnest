@@ -2,7 +2,18 @@
 {
 
 programs =
-  {
+  { 
+    alacritty = {
+    settings = {
+      window.padding = {
+        x = 10;  # Horizontal padding
+        y = 10;  # Vertical padding
+      };
+      font.size = 12;  # Font size
+      scrolling.history = 1000;  # Scrollback history
+      };
+    };
+
     zsh = {
     enable = true;
     enableCompletion = true;

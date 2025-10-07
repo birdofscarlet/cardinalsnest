@@ -4,9 +4,9 @@
     stylix = 
     {
       enable = true;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/bright.yaml";
-      polarity = "dark";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/windows-95.yaml";
       image = ../cardinal/walls/1.jpg;
+      
 
       cursor = 
       {

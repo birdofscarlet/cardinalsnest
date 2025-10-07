@@ -49,13 +49,13 @@
     proton-pass
     aseprite
     audacity
-    ciscoPacketTracer8
     gimp
     obs-studio
     prismlauncher
     ringracers
     teams-for-linux
     vlc
+    wineWowPackages.wayland
     #wonderdraft
     yt-dlp
     #(pkgs.callPackage ../../system/packages/derivations/dungeondraft.nix {})
