@@ -3,12 +3,12 @@
 {
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  programs.niri =
+  programs =
   {
-    enable = true;
+    niri.enable = true;
+    xwayland.enable = true;
   };
 
-# Desktop Services configuration
   services =
   {
     libinput.enable = true;
@@ -27,6 +27,11 @@
       };
     };
   };
+
+  environment.systemPackages = with pkgs;
+  [
+    xwayland-satellite
+  ];
 
 }
 

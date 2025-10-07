@@ -29,6 +29,7 @@
     swaylock.enable = true;
     waybar.enable = true;
     firefox.enable = true;
+    vim.enable = true;
   };
 
   services =
@@ -40,20 +41,24 @@
 
   home.packages = with pkgs;
   [
-  proton-pass
-  /*aseprite
+    gh
+    hyfetch
+    fastfetch
+    ranger
+    pcmanfm
+    proton-pass
+    aseprite
     audacity
     ciscoPacketTracer8
     gimp
     obs-studio
     prismlauncher
-
     ringracers
     teams-for-linux
     vlc
-    wonderdraft
+    #wonderdraft
     yt-dlp
-    (pkgs.callPackage ../../derivations/dungeondraft.nix {}) */
+    #(pkgs.callPackage ../../system/packages/derivations/dungeondraft.nix {})
   ];
 
 

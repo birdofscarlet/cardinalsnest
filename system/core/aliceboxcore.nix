@@ -12,5 +12,6 @@ imports =
     ./locale.nix
     ./desktop.nix
     ./stylix.nix
+    ./gaming.nix
     ];
 }

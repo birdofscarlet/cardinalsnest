@@ -2,14 +2,4 @@
 
 {
 
-# terminal utilities
-
-environment.systemPackages = with pkgs;
-  [
-    gh
-    hyfetch
-    fastfetch
-    ranger
-  ];
-
 }
