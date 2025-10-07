@@ -1,8 +1,5 @@
 { config, pkgs, lib, inputs, ... }:
 {
-
-
-  programs.steam.enable = true; # put this somewhere it makes sense later TODO
 imports =
     [
     ./boot.nix
@@ -15,5 +12,6 @@ imports =
     ./locale.nix
     ./desktop.nix
     ./stylix.nix
+    ./gaming.nix
     ];
 }

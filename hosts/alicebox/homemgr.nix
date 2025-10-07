@@ -16,50 +16,49 @@
 
   imports =
   [
-    ../../system/core/shell.nix
     ../../system/core/niri.nix
-    ../../system/core/stylix.nix
-    
+    ../../system/packages/discord.nix
+    ../../system/core/shell.nix
   ];
 
-  programs.git.enable = true;
+  programs =
+  {
+    git.enable = true;
+    alacritty.enable = true;
+    fuzzel.enable = true;
+    swaylock.enable = true;
+    waybar.enable = true;
+    firefox.enable = true;
+    vim.enable = true;
+  };
+
+  services =
+  {
+    wpaperd.enable = true;
+    mako.enable = true;
+    swayidle.enable = true;
+  };
 
   home.packages = with pkgs;
   [
-  # TODO: make this stuff part of the desktop.nix file somehow
-  alacritty
-  fuzzel
-  swaylock
-  waybar
-  swww
-  mako
-  swayidle
-  xwayland-satellite
-  xwayland
-
-  # TODO: put this in shell configuration file
-  vim
-  gh
-  hyfetch
-  fastfetch
-  x11_ssh_askpass
-
-  proton-pass
-  firefox
-  ranger
-  /*aseprite
+    gh
+    hyfetch
+    fastfetch
+    ranger
+    pcmanfm
+    proton-pass
+    aseprite
     audacity
-    ciscoPacketTracer8
     gimp
     obs-studio
     prismlauncher
-
     ringracers
     teams-for-linux
     vlc
-    wonderdraft
+    wineWowPackages.wayland
+    #wonderdraft
     yt-dlp
-    (pkgs.callPackage ../../derivations/dungeondraft.nix {}) */
+    #(pkgs.callPackage ../../system/packages/derivations/dungeondraft.nix {})
   ];
 
 

@@ -58,9 +58,18 @@ sudo nixos-rebuild switch --flake ~/mysystem
           modules = 
           [
 	    ./hosts/alicebox/configuration.nix
-	    inputs.home-manager.nixosModules.home-manager
 	    inputs.stylix.nixosModules.stylix
-	    inputs.niri.nixosModules.niri
+            inputs.niri.nixosModules.niri
+	    home-manager.nixosModules.home-manager
+	    {
+	      home-manager.useGlobalPkgs = true;
+	      home-manager.useUserPackages = true;
+	      home-manager.users.cardinal = import ./hosts/alicebox/homemgr.nix;
+              home-manager.sharedModules =
+              [
+                inputs.nixcord.homeModules.nixcord
+              ];
+	    }
 	  ];
         };
       };
