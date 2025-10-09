@@ -20,6 +20,7 @@
     ../../system/core/niri.nix
     ../../system/packages/discord.nix
     ../../system/core/shell.nix
+    ../../system/core/waybar.nix
   ];
 
   programs = {
@@ -27,14 +28,18 @@
     alacritty.enable = true;
     fuzzel.enable = true;
     swaylock.enable = true;
-    waybar.enable = true;
     firefox.enable = true;
     vim.enable = true;
   };
 
   services = {
     wpaperd.enable = true;
-    mako.enable = true;
+    mako = {
+      enable = true;
+      settings = {
+        default-timeout = 8000;
+      };
+    };
     swayidle.enable = true;
   };
 
@@ -47,6 +52,7 @@
     proton-pass
     aseprite
     audacity
+    protonvpn-gui
     gimp
     obs-studio
     prismlauncher
